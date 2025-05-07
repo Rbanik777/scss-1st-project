@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: auto;
+  overflow-y: auto;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+main {
+  width: 100%;
+  min-height: 130vh;
+  padding: 1.5rem;
+  padding-top: 4em;
+  .hero-text {
+    width: 100%;
+    img {
+      width: 100%;
+      max-height: 500px;  // Ensures it doesn't stretch too much
+      object-fit: cover;
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1rem 0 1.7rem 0;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .image-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    .image{
+      width: 100%;
+      aspect-ratio: 1/1;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      
+    }
+    .text2 {
+      display: flex;
+      flex-direction: column;
+      
+      
+      h2 {
+        margin-top: 2rem;
+        font-size: 2.7rem;
+        font-weight: 100; // Corrected from 1 to 100
+        line-height: 2.7rem;
+      }
+      p {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 100;
+        opacity: 0.8;
+        line-height: 1.7rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    .services {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5rem;
+      min-height: auto;
+      padding: 0.3rem 0;
+
+      .service {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        
+        
+        p {
+          font-size: 1.7rem;
+          font-weight: 100;
+          // padding-top: 4rem;
+          margin: 0;
+        }
+        h5 {
+          font-size: 1.7rem;
+          font-weight: 100; 
+        }
+      }
+    }
+  }
+
+
+
+  .vertical-text{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    .top{
+      width: 100%;
+      height: auto;
+      
+      img{
+        margin-top: 1rem;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .bottom{
+      display: flex;
+      gap: 2em;
+      p{
+        writing-mode: vertical-rl;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.7vh;
+        word-spacing: 0.7vh;
+      }
+      .text{
+        h1{
+          font-size: 3em;
+          font-weight: 100;
+          
+        }
+        p{
+          writing-mode: initial;
+          line-height: 1.7;
+          font-size: 1.3em;
+          opacity: .5;
+         
+          
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+}
+@media(min-width:900px){
+  main{
+    gap: 4rem;
+    padding: 4rem;
+    .image-text{
+      gap: 4em;
+      flex-direction: row-reverse;
+      .text2{
+        h2{
+          font-size: 3.5em;
+          margin-top: 2rem;
+          line-height: 1.1;
+        }
+        .services{
+          margin-top: auto;
+          .service{
+              font-size: 0.5em;
+          }
+        }
+      }
+    }
+    .vertical-text{
+      margin-top: 2rem;
+      gap: 4em;
+      flex-direction: row;
+        .top{
+          width: 35%;
+          
+        }
+        .bottom{
+          display: flex;
+          width: 65%;
+          width: 70%;
+          margin-top: 3rem;
+          flex-direction: row-reverse;
+          .text{
+            display: flex;
+            flex-direction: column;
+            h1{
+              font-size: 4.5vw;
+            }
+            p{
+              margin-top: auto;
+              font-size: 2vh;
+              width: 53%;
+            }
+          }
+        }
+
+    }
+  }
+}
